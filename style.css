@@ -1,0 +1,20 @@
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+#mobile-menu {
+    position: absolute;
+    top: 60px;
+    left: 200px; 
+    right: 0;
+    z-index: 20;
+}

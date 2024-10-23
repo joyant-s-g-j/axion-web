@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="fixed top-0 left-0 right-0 bg-white z-10 flex justify-between items-center p-4 sm:p-6 ">
+        <div class="ml-4 sm:ml-10">
+            <img class="w-16 sm:w-24" src="image/logo.png" alt="Bishesh Logo">
+        </div>
+        <div class="hidden sm:flex space-x-4 sm:space-x-8 mr-4 sm:mr-10 text-sm sm:text-lg font-semibold" id="nav-items">
+            <a href="#home" class="hover:text-gray-500">Home</a>
+            <a href="#about" class="hover:text-gray-500">About</a>
+            <a href="#services" class="hover:text-gray-500">Services</a>
+            <a href="#contact" class="hover:text-gray-500">Contact</a>
+        </div>
+        <!-- Hamburger Menu Button -->
+        <div class="sm:hidden mr-4">
+            <button id="menu-btn" onclick="toggleMenu()" class="text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden sm:hidden flex flex-col bg-white shadow-lg">
+        <a href="#home" class="block px-4 py-2 hover:text-gray-500">Home</a>
+        <a href="#about" class="block px-4 py-2 hover:text-gray-500">About</a>
+        <a href="#services" class="block px-4 py-2 hover:text-gray-500">Services</a>
+        <a href="#contact" class="block px-4 py-2 hover:text-gray-500">Contact</a>
+    </div>
+
+    <main id="home" class="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-16 pt-32 h-screen bg-gray-100">
+        <div class="text-center lg:text-left lg:w-1/2">
+            <h1 class="text-4xl sm:text-6xl font-bold leading-tight">Transforming Events into Unforgettable Experiences</h1>
+            <p class="mt-4 text-lg sm:text-xl font-semibold">Event Management Solutions</p>
+        </div>
+        <div class="mt-8 lg:mt-0 lg:ml-10 lg:w-1/2">
+            <img class="w-full max-w-xs sm:max-w-sm lg:max-w-full" src="image/main.png" alt="Event Image">
+        </div>
+    </main>
+
+    <section id="about" class="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-16 py-24 bg-gray-200">
+        <div class="text-center lg:text-left lg:w-1/2">
+            <h2 class="text-4xl sm:text-5xl font-bold">Transforming Visions into Reality</h2>
+            <p class="mt-4 text-lg sm:text-xl font-semibold">At Axion, we specialize in creating unforgettable experiences tailored to your needs. From corporate events to weddings, our expert team ensures a seamless and memorable occasion.</p>
+        </div>
+        <div class="mt-8 lg:mt-0 lg:ml-10 lg:w-1/2">
+            <img class="w-full max-w-xs sm:max-w-sm lg:max-w-full" src="image/about.png" alt="About Bishesh">
+        </div>
+    </section>
+
+    <section id="services" class="px-4 sm:px-8 lg:px-16 py-24">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center">Our Services</h2>
+        <p class="text-lg sm:text-xl mt-4 text-center font-semibold">At Bishesh, we offer comprehensive event management services tailored to your needs.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            <div class="bg-white shadow-lg rounded-lg p-5 transition-transform transform hover:scale-105">
+                <img class="w-full h-40 object-cover rounded-t-lg" src="image/plan.jpg" alt="Event Planning">
+                <h3 class="text-xl font-bold mt-4">Event Planning</h3>
+                <p class="mt-2">We handle all aspects of planning for seamless corporate meetings, private parties, and more.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-5 transition-transform transform hover:scale-105">
+                <img class="w-full h-40 object-cover rounded-t-lg" src="image/venue.jpg" alt="Venue Selection">
+                <h3 class="text-xl font-bold mt-4">Venue Selection</h3>
+                <p class="mt-2">Find the perfect location that fits your event style and budget with our expert help.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-5 transition-transform transform hover:scale-105">
+                <img class="w-full h-40 object-cover rounded-t-lg" src="image/catering.jpg" alt="Catering Services">
+                <h3 class="text-xl font-bold mt-4">Catering Services</h3>
+                <p class="mt-2">We provide a range of culinary options, including custom menus and dietary choices.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-5 transition-transform transform hover:scale-105">
+                <img class="w-full h-40 object-cover rounded-t-lg" src="image/decor.jpg" alt="Decoration & Design">
+                <h3 class="text-xl font-bold mt-4">Decoration & Design</h3>
+                <p class="mt-2">Creative themes and decor that bring your vision to life with stunning aesthetics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="px-4 sm:px-8 lg:px-16 py-24 bg-gray-200">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div>
+                <img class="w-28 sm:w-36 lg:w-40" src="image/logo.png" alt="Bishesh Logo">
+                <ul class="mt-6">
+                    <li class="flex items-center mb-3 gap-2">
+                        <img class="w-5 h-5" src="image/location.png" alt="Location">
+                        <p class="font-semibold">Uttara, Dhaka</p>
+                    </li>
+                    <li class="flex items-center mb-3 gap-2">
+                        <img class="w-5 h-5" src="image/gmail.png" alt="Email">
+                        <a class="font-semibold" href="mailto:bishesh@gmail.com">bishesh@gmail.com</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <img class="w-5 h-5" src="image/call.png" alt="Call">
+                        <p class="font-semibold">Helpline: 01518683509 (10AM - 5PM)</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-10 lg:mt-0">
+                <h3 class="text-2xl font-semibold">Social Media Links</h3>
+                <div class="flex gap-3 mt-4">
+                    <img class="w-8 h-8" src="image/facebook.png" alt="Facebook">
+                    <img class="w-8 h-8" src="image/youtube.png" alt="YouTube">
+                    <img class="w-8 h-8" src="image/instagram.png" alt="Instagram">
+                    <img class="w-8 h-8" src="image/linkedin.png" alt="LinkedIn">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-200">
+        <hr class="border-t-2 border-dashed border-gray-500">
+        <div class="p-5 text-center font-semibold">
+            <p>Copywrite © 2024 | BISHESH</p>
+            <p>Uttara, Dhaka</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
